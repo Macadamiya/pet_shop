@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pet Shop</title>
+
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- FooTable -->
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    <!-- Left sidebar -->
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <span>
+                            <img alt="image" class="img-circle" style="width:40px; height:40px;" src="img/user.png"/>
+                        </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong
+                                    class="font-bold">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Gerente de armazém <b
+                                    class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        Pet +
+                    </div>
+                </li>
+                <!-- Produto -->
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-desktop"></i>
+                        <span class="nav-label">Produtos</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse">
+                        <li class="active"><a href="lista-produto.html">Lista de Produtos</a></li>
+                    </ul>
+                </li>
+                <!-- Fim Produto -->
+                <!-- Animal de Estimação -->
+                <li>
+                    <a href="#">
+                        <i class="fa fa-github-alt"></i>
+                        <span class="nav-label">Animal de Estimação</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="search_results.html">Lista de Animais</a></li>
+                    </ul>
+                </li>
+                <!-- Fim Animal de Estimação -->
+                <!-- Cliente -->
+                <li>
+                    <a href="#">
+                        <i class="fa fa-users"></i>
+                        <span class="nav-label">Cliente</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="lista-cliente.html">Lista de Clientes</a></li>
+                        <li><a href="search_results.html">Agenda</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i>
+                    </a>
+                    <form role="search" class="navbar-form-custom" action="#">
+                        <div class="form-group">
+                            <input type="text" placeholder="Procure por algo..." class="form-control"
+                                   name="top-search" id="top-search">
+                        </div>
+                    </form>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">Bem-vindo ao Sistema Pet+ .</span>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="mailbox.html">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="profile.html">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                        <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="grid_options.html">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="notifications.html">
+                                        <strong>See All Alerts</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="login.html">
+                            <i class="fa fa-sign-out"></i> Sair
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>Lista de Produtos</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a>Produto</a>
+                    </li>
+                    <li class="active">
+                        <strong>Lista de Produtos</strong>
+                    </li>
+                    <li>
+                        <a href="produto-add.html">Cadastrar Produto</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content animated fadeInRight ecommerce">
+            <div class="ibox-content m-b-sm border-bottom">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="product_name">Nome do produto</label>
+                            <input type="text" id="product_name" name="product_name" value=""
+                                   placeholder="Nome do Produto" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="brand_select">Marca do Produto</label>
+                            <select id="brand_select" name="brand_select" class="form-control">
+                                <option value="brand1">Marca 1</option>
+                                <option value="brand2">Marca 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="supplier_select">Informações do Fornecedor</label>
+                            <select id="supplier_select" name="supplier_select" class="form-control">
+                                <option value="supplier1">Fornecedor 1</option>
+                                <option value="supplier2">Fornecedor 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="status">Estado do Inventário</label>
+                            <select name="status" id="status" class="form-control">
+                                <option value="1" selected>Em estoque</option>
+                                <option value="0">Esgotado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox">
+                        <div class="ibox-content">
+
+                            <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+                                <thead>
+                                <tr>
+
+                                    <th data-toggle="true">Nome do Produto</th>
+                                    <th data-hide="phone">Marca</th>
+                                    <th data-hide="all">Descrição</th>
+                                    <th data-hide="phone">Preço</th>
+                                    <th data-hide="phone,tablet">Quantidade</th>
+                                    <th data-hide="phone">Status</th>
+                                    <th class="text-right" data-sort-ignore="true">Action</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        Shampoo
+                                    </td>
+                                    <td>
+                                        Marca 1
+                                    </td>
+                                    <td>
+                                        Este shampoo, enriquecido com extratos naturais, oferece uma limpeza profunda
+                                        enquanto nutre os cabelos. Ideal para uso diário, fortalece os fios, deixando-os
+                                        macios e brilhantes, com uma fragrância suave e refrescante.
+                                    </td>
+                                    <td>
+                                        R$50.00
+                                    </td>
+                                    <td>
+                                        1000
+                                    </td>
+                                    <td>
+                                        <span class="label label-primary">Em estoque</span>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="btn-group">
+                                            <button class="btn-white btn btn-xs">Visualizar</button>
+                                            <button class="btn-white btn btn-xs">Editar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Condicionador
+                                    </td>
+                                    <td>
+                                        Marca 1
+                                    </td>
+                                    <td>
+                                        It is a long established fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                        that it has a more-or-less normal distribution of letters, as opposed to using
+                                        'Content here, content here', making it look like readable English.
+                                    </td>
+                                    <td>
+                                        R$40.00
+                                    </td>
+                                    <td>
+                                        4300
+                                    </td>
+                                    <td>
+                                        <span class="label label-primary">Em estoque</span>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="btn-group">
+                                            <button class="btn-white btn btn-xs">Visualizar</button>
+                                            <button class="btn-white btn btn-xs">Editar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Máquina de Tosa
+                                    </td>
+                                    <td>
+                                        Marca 3
+                                    </td>
+                                    <td>
+                                        It is a long established fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                        that it has a more-or-less normal distribution of letters, as opposed to using
+                                        'Content here, content here', making it look like readable English.
+                                    </td>
+                                    <td>
+                                        R$22.00
+                                    </td>
+                                    <td>
+                                        300
+                                    </td>
+                                    <td>
+                                        <span class="label label-danger">Esgotado</span>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="btn-group">
+                                            <button class="btn-white btn btn-xs">Visualizar</button>
+                                            <button class="btn-white btn btn-xs">Editar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="6">
+                                        <ul class="pagination pull-right"></ul>
+                                    </td>
+                                </tr>
+                                </tfoot>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <a href="https://shop194286523.taobao.com/" title="banho e tosa" target="_blank">Extra Pet</a> Banho e
+                Tosa
+                &copy; 2023 - 2023
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- FooTable -->
+<script src="js/plugins/footable/footable.all.min.js"></script>
+
+<!-- Page-Level Scripts -->
+<script>
+    $(document).ready(function () {
+
+        $('.footable').footable();
+
+    });
+
+</script>
+
+</body>
+
+</html>
